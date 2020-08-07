@@ -1,5 +1,5 @@
-FROM python:3.5
-MAINTAINER Tinpee <tinpee.dev@gmail.com>
+FROM python:3.6
+#MAINTAINER Toan Hoang <hoangminhtoant2l1@gmail.com>
 
 ADD . /src
 WORKDIR /src

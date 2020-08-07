@@ -1,62 +1,36 @@
 # Computer Science Flash Cards
 
-This is a little website I've put together to allow me to easily make flash cards and quiz myself for memorization of:
+Part of my daily plan on studying data structure and algorithms
 
 - general cs knowledge
     - vocabulary
     - definitions of processes
     - powers of 2
     - design patterns
+    - sql
 - code
     - data structures
     - algorithms
     - solving problems
     - bitwise operations
-
-Will be able to use it on:
-    - desktop
-    - mobile (phone and tablet)
-
-It uses:
-- Python 3
-- Flask
-- SQLite
-
+- others
+    - korean (currently working)
 ---
+## Prerequisites
+I recommend you should install this repo in virtual environment
 
-## About the Site
-
-Here's a brief rundown: https://startupnextdoor.com/flash-cards-site-complete/
-
-## Screenshots
-
-UI for listing cards. From here you can add and edit cards.
-
-![Card UI](screenshots/cards_ui-1467754141259.png)
-
+ * Run Script
+ ```
+ bash install_env.sh <$your virtual env>
+ ```
 ---
-
-The front of a General flash card.
-
-![Memorizing general knowledge](screenshots/memorize_ui-1467754306971.png)
-
----
-
-The reverse (answer side) of a Code flash card.
-
-![Code view](screenshots/memorize_code-1467754962142.png)
 
 ## Important Note
 
-The set included in this project (**cards-jwasham.db**) is not my full set, and is way too big already.
-
-Thanks for asking for my list of 1,792 cards. But **it’s too much.** I even printed them out. It’s 50 pages, front and back, in tiny text. It would take about 8 hours to just read them all.
-
-My set includes a lot of obscure info from books I’ve read, Python trivia, machine learning knowledge, assembly language, etc.
-
-I've added it to the project if you want it (**cards-jwasham-extreme.db**). You've been warned.
-
-Please make your own set, and while you’re making them, only make cards for what you need to know. Otherwise, it gets out of hand. 
+## Database
+  * **cards-jwasham.db** includes 1,972 cards
+  * **cards-jwasham-extreme.db**
+ 
 
 ## How to convert to Anki or CSV
 
@@ -66,26 +40,6 @@ https://github.com/eyedol/tools/blob/master/anki_data_builder.py
 
 Thanks [@eyedol](https://github.com/eyedol)
 
-## How to run it on a server
-
-1. Clone project to a directory on your web server.
-1. Edit the config.txt file. Change the secret key, username and password. The username and password will be the login 
-    for your site. There is only one user - you.
-1. Follow this long tutorial to get Flask running. It was way more work than it should be:
-    https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04
-    - `wsgi.py` is the entry point. It calls `flash_cards.py`
-    - This is my systemd file `/etc/systemd/system/flash_cards.service`: [view](flash_cards.service)
-        - you can see the paths where I installed it, and the name of my virtualenv directory
-    - when done with tutorial:
-    ```
-    sudo systemctl restart flash_cards
-    sudo systemctl daemon-reload
-    ```
-1. When you see a login page, you're good to go.
-1. Log in.
-1. Click the "General" or "Code" button and make a card!
-1. When you're ready to start memorizing, click either "General" or "Code"
-    in the top menu.
 
 ## How to run it on local host (Quick Guide)
 
@@ -165,12 +119,12 @@ heroku container:push web --app your-app-name
 heroku container:release web --app your-app-name
 heroku open --app your-app-name
 ```
+---
+## Acknowledge
 
-## Alternative for Node fans
+Thanks to 
+ * [@jwashsam](https://github.com/jwasham/computer-science-flash-cards) 
+ * [@ashwanikumar04](https://github.com/ashwanikumar04) put together an alternative flash cards site running Node: https://github.com/ashwanikumar04/flash-cards
 
-[@ashwanikumar04](https://github.com/ashwanikumar04) put together an alternative flash cards site running Node: https://github.com/ashwanikumar04/flash-cards
 
-Check out the demo!
-
-*Happy learning!*
 

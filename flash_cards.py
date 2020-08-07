@@ -8,7 +8,7 @@ app.config.from_object(__name__)
 
 # Load default config and override config from an environment variable
 app.config.update(dict(
-    DATABASE=os.path.join(app.root_path, 'db', 'cards.db'),
+    DATABASE=os.path.join(app.root_path, 'db', 'cards-jwasham-extreme.db'),
     SECRET_KEY='development key',
     USERNAME='admin',
     PASSWORD='default'
@@ -24,7 +24,7 @@ def connect_db():
 
 def init_db():
     db = get_db()
-    with app.open_resource('data/schema.sql', mode='r') as f:
+    with app.open_resource('data/-- SQLite.sql', mode='r') as f:
         db.cursor().executescript(f.read())
     db.commit()
 
@@ -49,10 +49,10 @@ def close_db(error):
 
 # Uncomment and use this to initialize database, then comment it
 #   You can rerun it to pave the database and start over
-# @app.route('/initdb')
-# def initdb():
-#     init_db()
-#     return 'Initialized the database.'
+#@app.route('/initdb')
+#def initdb():
+#    init_db()
+#    return 'Initialized the database.'
 
 
 @app.route('/')
@@ -278,4 +278,4 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='127.0.0.1')
