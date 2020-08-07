@@ -55,7 +55,7 @@ Thanks [@eyedol](https://github.com/eyedol)
 5. Login using id:USERNAME='admin', PASSWORD='default. 
 6. Comment the line 52-55 in flash_cards.py
 
-NOTE: If you wish to use John's flash cards then also do following steps:
+**NOTE:** If you wish to use John's flash cards then also do following steps:
 1. Copy db files such as ```cards-jwasham-extreme``` OR ```cards-jwasham``` and paste them in db folder
 2. Edit file ```flash_cards.py``` line 11 and replace cards with any of the other database files
 3. Repeat the above steps from step 3
