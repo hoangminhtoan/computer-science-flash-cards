@@ -1,3 +1,6 @@
+echo "Install SQLite3"
+sudo apt-get install -y sqlite3
+
 # run this command before install pycurl
 sudo apt install libcurl4-openssl-dev libssl-dev
 

@@ -17,12 +17,9 @@ Part of my daily plan on studying data structure and algorithms
     - korean (currently working)
 ---
 ## Prerequisites
-I recommend you should install this repo in virtual environment
-
- * Run Script
- ```
- bash install_env.sh <$your virtual env>
- ```
+- Python3
+- SQLite3
+- virtualenvwrapper for creating python virtual environment
 ---
 
 ## Important Note
@@ -51,7 +48,7 @@ Thanks [@eyedol](https://github.com/eyedol)
   3. To install pip, securely download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
   4. Run ```python get-pip.py```in terminal
   5. Add pip to your PATH system variable [windows](https://stackoverflow.com/questions/23708898/pip-is-not-recognized-as-an-internal-or-external-command)
-  6. Run ``` pip install -r requirements.txt``` in terminal after going to correct folder
+  6. Run ``` bash install_env.sh ``` in terminal after going to correct folder
 2. Open flash_cards.py and uncomment the line 52-55 beginning from ``` @app.route('/initdb')```
 3. Type ```python flash_cards.py``` - if you get error for flask then use ```python -m pip install Flask``` first then run ```flash_card.py``` file 
 4. Open localhost:5000/initdb
